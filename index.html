@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>☿ Mercury - Rainbow Wiki</title>
+  <style>
+    /* Reset and background */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f1a2b, #111c2e);
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    /* Rainbow Heading */
+    header {
+      padding: 40px 20px 10px;
+      text-align: center;
+      background: #0b1622;
+      border-bottom: 2px solid #4fc3f7;
+    }
+
+    header h1 {
+      font-size: 3em;
+      font-weight: bold;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 6s linear infinite;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% }
+      100% { background-position: 100% }
+    }
+
+    /* Fixed Nav under header */
+    nav {
+      background-color: #142233;
+      text-align: center;
+      padding: 15px 10px;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      border-bottom: 2px solid #4fc3f7;
+    }
+
+    .nav-links a {
+      color: #80d8ff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 500;
+      font-size: 1em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #4fc3f7;
+      color: #000;
+    }
+
+    /* Content Sections */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 30px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #4fc3f7;
+      background: linear-gradient(to right, #f9c74f, #90be6d, #00bcd4, #7c4dff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p, li {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    
+
+    .planet-img {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .planet-img img {
+      width: 280px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 0 30px #f9c74f;
+      animation: float 5s ease-in-out infinite, spin 20s linear infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    footer {
+      text-align: center;
+      color: #bbb;
+      font-size: 0.9em;
+      padding: 30px;
+      background: #0f1a2b;
+      margin-top: 80px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+
+.rainbow-sub {
+  background: linear-gradient(to right, #ff0000, #ffa500, #ffff00, #00ff00, #00bfff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  border-bottom: 2px solid #4fc3f7;
+  padding-bottom: 6px;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.rainbow-sub {
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #4fc3f7;
+  background: linear-gradient(to right, #ff0000, #ffa500, #ffff00, #00ff00, #00bfff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+section ul ul {
+  list-style-type: circle;
+  margin-top: 10px;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background: #111c2e;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 100;
+  border-bottom: 1px solid #4fc3f7;
+}
+nav a {
+  color: #80d8ff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+ 
+.rainbow-text {
+  font-size: 2em;
+  display: inline-block; /* REQUIRED for gradient text to show */
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid #4fc3f7;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+  html {
+    scroll-behavior: smooth;
+  }
+  [id]::before {
+    content: "";
+    display: block;
+    height: 140px; /* Increase offset to fix cut-off */
+    margin-top: -140px;
+    visibility: hidden;
+  </style>
+</head>
+<body>
+
+  <!-- Rainbow Heading -->
+  <header>
+    <h1>☿ Planet Mercury</h1>
+  </header>
+
+  <!-- Fixed Nav Under Header -->
+ <nav style="position: sticky; top: 0; background: linear-gradient(to right, #1e3a8a, #2563eb, #9333ea); color: white; padding: 12px 20px; z-index: 1000; display: flex; flex-wrap: wrap; gap: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border-radius: 10px; font-family: 'Segoe UI', sans-serif; font-size: 15px; justify-content: center;">
+  <a href="#orbit" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🌀 Orbital Characteristics</a>
+  <a href="#nomenclature" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">📘 Nomenclature</a>
+  <a href="#physical" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🧱 Physical Characteristics</a>
+  <a href="#temperature" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🔥 Temperature & Light</a>
+  <a href="#atmosphere" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🌫 Exosphere</a>
+  <a href="#internal-structure" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🏗 Internal Structure</a>
+  <a href="#surface-geology" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🪨 Surface Geology</a>
+  <a href="#impact-basins" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">💥 Impact Basins</a>
+  <a href="#plains" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🌄 Plains</a>
+  <a href="#compressional-features" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🧱 Compressional Features</a>
+  <a href="#volcanism" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🌋 Volcanism</a>
+  <a href="#surface-conditions" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🏜 Surface Conditions</a>
+  <a href="#magnetic-field" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🧲 Magnetic Field</a>
+  <a href="#orbit-rotation" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🔁 Orbit & Speed</a>
+  <a href="#longitude-convention" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">📐 Longitude</a>
+  <a href="#spin-orbit-resonance" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🔄 Spin-Orbit</a>
+  <a href="#advance-of-perihelion" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🌞 Perihelion</a>
+  <a href="#observation-history" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🔭 Observation</a>
+  <a href="#space-probes" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🛰 Space Probes</a>
+  <a href="#facts" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">💡 Fun Facts</a>
+  <a href="#gallery" style="color: white; text-decoration: none; font-weight: bold; transition: 0.3s;">🖼 Gallery</a>
+</nav>
+
+<!-- ORBITAL CHARACTERISTICS SECTION -->
+<section id="orbit">
+  <h2 class="rainbow-sub">🌀 Orbital Characteristics</h2>
+  <ul>
+    <li><strong>Epoch:</strong> J2000</li>
+    <li><strong>Aphelion:</strong> 0.466697 AU (69.82 million km)</li>
+    <li><strong>Perihelion:</strong> 0.307499 AU (46.00 million km)</li>
+    <li><strong>Semi-major axis:</strong> 0.387098 AU (57.91 million km)</li>
+    <li><strong>Eccentricity:</strong> 0.205630</li>
+    <li><strong>Orbital period (sidereal):</strong> 87.9691 days (~0.240846 years)</li>
+    <li><strong>Orbital period (synodic):</strong> 115.88 days</li>
+    <li><strong>Average orbital speed:</strong> 47.36 km/s</li>
+    <li><strong>Mean anomaly:</strong> 174.796°</li>
+    <li><strong>Inclination:</strong> 7.005° to ecliptic</li>
+    <li><strong>Inclination (to Sun’s equator):</strong> 3.38°</li>
+    <li><strong>Inclination (to invariable plane):</strong> 6.35°</li>
+    <li><strong>Longitude of ascending node:</strong> 48.331°</li>
+    <li><strong>Argument of perihelion:</strong> 29.124°</li>
+    <li><strong>Satellites:</strong> None</li>
+  </ul>
+</section>
+<section id="nomenclature">
+  <h2 class="rainbow-text"><i class="fas fa-pen-fancy"></i> Nomenclature</h2>
+  <p>
+    The planet Mercury derives its name from the Roman deity <strong>Mercury</strong>, the swift-footed messenger god of commerce, communication, and travel.
+    This name was chosen because Mercury, the planet, exhibits the fastest motion among the classical planets, completing an orbit around the Sun in just
+    88 Earth days. Ancient civilizations were fascinated by its rapid movement across the dawn and dusk skies. The <strong>Babylonians</strong> associated
+    it with their god <strong>Nabu</strong>, the scribe of the gods, due to its quick appearances. In Greek mythology, it was known as <strong>Hermes</strong>.
+    The use of the Roman name 'Mercury' became standardized through Latin texts and the influence of Roman astronomical tradition on European sciences.
+    Despite being small and difficult to observe due to its proximity to the Sun, Mercury has maintained an important role in both ancient mythology and
+    modern astronomy, often representing agility, transformation, and intellect across various cultures throughout history.
+  </p>
+</section>
+
+<!-- PHYSICAL CHARACTERISTICS SECTION -->
+<section id="physical">
+  <h2 class="rainbow-sub">🧬 Physical Characteristics</h2>
+  <ul>
+    <li><strong>Mean radius:</strong> 2,439.7 ± 1.0 km (0.3829 Earths)</li>
+    <li><strong>Flattening:</strong> 0.0009</li>
+    <li><strong>Surface area:</strong> 7.48 × 10⁷ km² (0.147 Earths)</li>
+    <li><strong>Volume:</strong> 6.083 × 10¹⁰ km³ (0.056 Earths)</li>
+    <li><strong>Mass:</strong> 3.3011 × 10²³ kg (0.055 Earths)</li>
+    <li><strong>Mean density:</strong> 5.427 g/cm³</li>
+    <li><strong>Surface gravity:</strong> 3.7 m/s² (0.38 g)</li>
+    <li><strong>Escape velocity:</strong> 4.25 km/s</li>
+    <li><strong>Moment of inertia factor:</strong> 0.346 ± 0.014</li>
+    <li><strong>Sidereal rotation period:</strong> 58.646 days (1407.5 hours)</li>
+    <li><strong>Synodic rotation period:</strong> 176 days</li>
+    <li><strong>Equatorial rotation velocity:</strong> 3.026 m/s</li>
+    <li><strong>Axial tilt:</strong> 0.034° (2.04′ ± 0.08′)</li>
+    <li><strong>North pole right ascension:</strong> 18h 44m 2s (281.01°)</li>
+    <li><strong>North pole declination:</strong> 61.41°</li>
+  </ul>
+</section>
+
+<!-- TEMPERATURE SECTION -->
+<section id="temperature">
+  <h2 class="rainbow-sub">🌡️ Temperature & Light</h2>
+  <ul>
+    <li><strong>Blackbody temperature:</strong> 437 K (164 °C)</li>
+    <li><strong>Surface temperature at 0°N, 0°W:</strong> min −173 °C, mean 67 °C, max 427 °C</li>
+    <li><strong>Surface temperature at 85°N, 0°W:</strong> min −193 °C, mean −73 °C, max 106.85 °C</li>
+    <li><strong>Apparent magnitude:</strong> −2.48 to +7.25</li>
+    <li><strong>Absolute magnitude (H):</strong> −0.4</li>
+    <li><strong>Angular diameter:</strong> 4.5″ to 13″</li>
+  </ul>
+</section>
+
+<!-- ATMOSPHERE SECTION -->
+<section id="atmosphere">
+  <h2 class="rainbow-sub">💨 Exosphere (Thin Atmosphere)</h2>
+  <p>Mercury has an extremely thin exosphere rather than a true atmosphere. It is made up of trace amounts of elements and is constantly being replenished by solar wind and micrometeorites.</p>
+  <ul>
+    <li><strong>Surface pressure:</strong> Trace (≲ 0.5 nPa)</li>
+    <li><strong>Main components (by volume):</strong></li>
+    <ul>
+      <li>Atomic oxygen</li>
+      <li>Sodium</li>
+      <li>Magnesium</li>
+      <li>Atomic hydrogen</li>
+      <li>Potassium</li>
+      <li>Calcium</li>
+      <li>Helium</li>
+      <li>Trace gases: iron, aluminium, argon, nitrogen, oxygen, CO₂, water vapor, xenon, krypton, neon</li>
+    </ul>
+  </ul>
+</section>
+<section id="internal-structure">
+  <h2 class="rainbow-text"><i class="fas fa-dna"></i> Internal Structure</h2>
+  <p>
+    Mercury has one of the most unique internal structures among the terrestrial planets. It is composed of three main layers:
+    a large metallic <strong>core</strong>, a thin <strong>mantle</strong>, and an outer <strong>crust</strong>. Mercury's iron-rich core is exceptionally large, 
+    making up nearly 85% of the planet’s radius and about 55–60% of its total mass. This core is believed to be partially molten, which helps generate Mercury's weak but global magnetic field—a surprising feature for a small, slowly rotating planet.
+  </p>
+  <p>
+    The <strong>core</strong> itself is thought to be differentiated into two zones: a solid inner core and a liquid outer core, much like Earth’s structure. Above the core lies a silicate <strong>mantle</strong>, estimated to be only 400–700 kilometers thick—very thin relative to the planet's size. The outermost layer is the <strong>crust</strong>, which ranges from about 100 to 300 kilometers in thickness. 
+  </p>
+  <p>
+    Mercury's disproportionately large core is believed to be the result of one or more massive impacts during its early history, possibly stripping away much of the original rocky mantle. Seismic data is limited, but information from the MESSENGER spacecraft's gravity and topography measurements has confirmed the planet's highly differentiated structure. Despite being smaller than Earth’s moon, Mercury is denser than any planet except Earth due to this metal-rich core.
+  </p>
+</section>
+
+<section id="surface-geology">
+  <h2 class="rainbow-text"><i class="fas fa-mountain"></i> Surface Geology</h2>
+  <p>
+    Mercury’s surface is an ancient and heavily cratered landscape, resembling Earth's Moon in many ways. It is dominated by three primary types of terrain:
+    <strong>heavily cratered highlands</strong>, <strong>smooth plains</strong>, and <strong>intercrater plains</strong>. These terrains record a long geological history stretching back over 4 billion years.
+  </p>
+  <p>
+    One of the most prominent features on Mercury is the <strong>Caloris Basin</strong>, an enormous impact crater about 1,550 kilometers in diameter, surrounded by a ring of mountains and filled with smooth volcanic plains. 
+    These plains were formed by widespread <strong>volcanic activity</strong> in Mercury’s early history, when molten lava resurfaced large areas of the planet. 
+    Evidence of ancient lava flows and pyroclastic deposits indicates that volcanism was once widespread, though Mercury has since cooled and become geologically quiet.
+  </p>
+  <p>
+    Unique to Mercury’s geology are <strong>lobate scarps</strong>, massive cliff-like landforms caused by the planet shrinking as its interior cooled. 
+    These scarps can reach hundreds of kilometers in length and rise up to 3 kilometers high. They suggest that Mercury's lithosphere contracted as the core solidified over time.
+  </p>
+  <p>
+    Because of Mercury’s lack of atmosphere, erosional processes like wind or water activity are virtually absent. This means impact craters and other surface features remain well-preserved. The oldest terrains, scarred with overlapping craters, reveal a violent early history of intense bombardment.
+  </p>
+</section>
+<section id="impact-basins">
+  <h2 class="rainbow-text">💥 Impact Basins and Craters</h2>
+  <img src="https://www.labnews.co.uk/files/img_cache/2157096/620PIA19216-new-web-2.jpg?1561995514" alt="Caloris Basin on Mercury" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    Mercury’s surface is densely packed with <strong>impact basins and craters</strong> formed billions of years ago during the period known as the Late Heavy Bombardment. 
+    These features dominate the landscape due to the planet’s lack of atmosphere, which provides no protection from meteoroids. The largest and most notable of these is the <strong>Caloris Basin</strong>, measuring about 1,550 km in diameter. 
+    This immense structure is surrounded by concentric mountain rings and was likely formed by a massive asteroid impact. 
+    Smaller craters such as <em>Shakespeare</em>, <em>Tolstoj</em>, and <em>Rembrandt</em> also provide valuable insights into the planet’s history. 
+    Many of Mercury’s craters show unique <strong>bright ray systems</strong>, formed when material was ejected during impact events.
+  </p>
+</section>
+
+<section id="plains">
+  <h2 class="rainbow-text">🌄 Plains</h2>
+  <img src="https://www.nasa.gov/wp-content/uploads/2023/03/messenger-19-northernplains_2015.png" alt="Smooth Plains on Mercury" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    Mercury’s plains are classified into two major types: <strong>intercrater plains</strong> and <strong>smooth plains</strong>. Intercrater plains are older, heavily cratered, and widely distributed between larger impact basins.
+    In contrast, smooth plains are relatively flat, younger surfaces believed to be formed by <strong>extensive lava flows</strong> or volcanic resurfacing events. 
+    These smooth areas are especially prominent within and around large impact basins like Caloris. The nature of these plains is similar to the lunar maria, suggesting that Mercury underwent periods of intense volcanism.
+  </p>
+</section>
+
+<section id="compressional-features">
+  <h2 class="rainbow-text">⛰ Compressional Features</h2>
+  <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23236.jpg" alt="Lobate Scarp on Mercury" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    A distinctive aspect of Mercury’s geology is its <strong>compressional tectonics</strong>. The most striking features are the <strong>lobate scarps</strong>—large curved cliffs that stretch for hundreds of kilometers and rise up to several kilometers in height.
+    These formed as Mercury’s metallic core cooled and contracted, causing the crust to shrink and fold. Unlike Earth, where tectonic plates shift and diverge, Mercury's entire surface has been compressed over time.
+    This planetary contraction is estimated to have decreased Mercury’s radius by as much as 7 kilometers since its formation.
+  </p>
+</section>
+
+<section id="volcanism">
+  <h2 class="rainbow-text">🌋 Volcanism</h2>
+  <img src="https://th-thumbnailer.cdn-si-edu.com/TKyh0ZrGdOQKBrOtq5Mvp5yDZdo=/1026x684/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/ee/ae/eeae758f-fbe2-4112-aa0f-b9b6eb326a36/mercury_craters_0.png" alt="Volcanic Vent on Mercury" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    Mercury was once a volcanically active world. <strong>Volcanic plains</strong> cover large areas of the surface, and many are associated with impact basins, especially Caloris.
+    The plains were formed by extensive <strong>basaltic lava flows</strong> that spread across the surface in Mercury’s early history. In addition to widespread effusive volcanism, scientists have discovered evidence of <strong>explosive volcanic vents</strong>,
+    characterized by bright, irregular pits surrounded by pyroclastic deposits. These pyroclastic eruptions likely involved volatile substances, which is surprising given Mercury's proximity to the Sun.
+    Today, volcanism on Mercury has ceased, but its legacy remains etched into the crust.
+  </p>
+</section>
+
+<section id="surface-conditions">
+  <h2 class="rainbow-text">🌡 Surface Conditions and Exosphere</h2>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo3gltk2Qz9XFrFuCYjZ-NP35h8lYT7a6PlA&s" alt="Temperature Map of Mercury" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    Mercury has some of the most extreme surface conditions in the Solar System. With no significant atmosphere to retain heat, surface temperatures range from about <strong>−173°C at night</strong> to over <strong>427°C during the day</strong>.
+    Despite this, Mercury has a very thin and fragile <strong>exosphere</strong>—a cloud of atoms ejected from the surface by solar wind and micrometeorite impacts.
+    The exosphere contains trace amounts of <em>sodium, potassium, calcium, hydrogen, helium, and oxygen</em>, among others. It is constantly replenished due to the lack of a stable atmosphere.
+    The lack of air pressure and rapid temperature changes result in a harsh and barren environment incapable of supporting life as we know it.
+  </p>
+</section>
+
+<section id="magnetic-field">
+  <h2 class="rainbow-text">🧲 Magnetic Field and Magnetosphere</h2>
+  <img src="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-319-12117-8_6/MediaObjects/317289_1_En_6_Fig3_HTML.gif" alt="Magnetic Field Lines of Mercury" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    Mercury is unique among the terrestrial planets for having a global magnetic field. Detected by the <strong>Mariner 10</strong> mission in 1974 and later studied in detail by <strong>MESSENGER</strong>,
+    the field is about 1% as strong as Earth’s. It is believed to originate from a <strong>partially liquid iron core</strong> that generates a dynamo effect.
+    The magnetic field interacts with the solar wind to form a miniature <strong>magnetosphere</strong>, including a bow shock, magnetotail, and regions of charged particle accumulation.
+    However, the small size of the magnetosphere makes Mercury vulnerable to solar storms, and the solar wind can penetrate closer to the surface than on Earth.
+    Mercury’s magnetic field is also offset to the north, which remains an active area of scientific investigation.
+  </p>
+</section>
+
+<section id="orbit-rotation">
+  <h2 class="rainbow-text">🪐 Orbit, Speed, and Rotation</h2>
+  <p>
+    Mercury orbits the Sun at an average distance of about <strong>57.9 million kilometers</strong> (0.39 AU), making it the closest planet to the Sun. It follows a highly <strong>elliptical orbit</strong> with an eccentricity of 0.206, the highest among all the major planets. Due to this, Mercury’s distance from the Sun varies significantly—from <strong>46 million km at perihelion</strong> to <strong>70 million km at aphelion</strong>.
+  </p>
+  <p>
+    The planet moves with an <strong>average orbital speed</strong> of <strong>47.36 km/s</strong>, making it the fastest-moving planet in the Solar System. One complete orbit around the Sun takes approximately <strong>88 Earth days</strong>.
+  </p>
+  <p>
+    In terms of rotation, Mercury exhibits a <strong>slow sidereal rotation period</strong> of about <strong>58.6 Earth days</strong>. However, due to its orbital resonance with the Sun, the time it takes for the Sun to return to the same position in Mercury's sky (a solar day) is about <strong>176 Earth days</strong>.
+  </p>
+</section>
+
+<section id="longitude-convention">
+  <h2 class="rainbow-text">🧭 Longitude Convention</h2>
+  <p>
+    Mercury's <strong>longitude system</strong> was established using the crater <strong>Hun Kal</strong> as the prime meridian, defined at exactly <strong>20° west longitude</strong>. This standard was adopted by the International Astronomical Union (IAU) to help map and coordinate planetary features on Mercury’s surface.
+  </p>
+</section>
+
+<section id="spin-orbit-resonance">
+  <h2 class="rainbow-text">🔄 Spin-Orbit Resonance</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Mercury%27s_orbital_resonance.svg/250px-Mercury%27s_orbital_resonance.svg.png" alt="Spin-Orbit Resonance" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    One of Mercury’s most remarkable orbital characteristics is its <strong>3:2 spin-orbit resonance</strong>. This means Mercury rotates three times on its axis for every two orbits it completes around the Sun. This unusual resonance is stable and caused by the planet’s high eccentricity and proximity to the Sun. As a result, the same side of Mercury faces the Sun at every perihelion passage.
+  </p>
+  <p>
+    This phenomenon was discovered in the 1960s through radar observations and corrected the earlier assumption that Mercury was tidally locked to the Sun.
+  </p>
+</section>
+
+<section id="advance-of-perihelion">
+  <h2 class="rainbow-text">📐 Advance of Perihelion</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Drehung_der_Apsidenlinie_light.svg/250px-Drehung_der_Apsidenlinie_light.svg.png" alt="Advance of Perihelion" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+
+  <p>
+    Mercury’s elliptical orbit slowly rotates around the Sun, a phenomenon known as the <strong>advance of the perihelion</strong>. While most of this precession can be explained by Newtonian mechanics, a small portion—about <strong>43 arcseconds per century</strong>—could not be accounted for until Albert Einstein’s <strong>General Theory of Relativity</strong>.
+  </p>
+  <p>
+    This unaccounted motion provided one of the first confirmations of general relativity and remains a famous test case in modern physics.
+  </p>
+</section>
+
+<section id="observation-history">
+  <h2 class="rainbow-text">🔭 Observation History</h2>
+<img src="https://i.pinimg.com/736x/fa/31/d6/fa31d6dc85945c372955d03b4c56abee.jpg" alt="Ancient Astronomy Table" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    Mercury has been observed by humans since antiquity, with its earliest records appearing in Babylonian astronomy around the 1st millennium BCE. Ancient Greek astronomers knew the planet by two names: <em>Apollo</em> when seen in the morning and <em>Hermes</em> in the evening, until it was later understood they were the same object. In India, Mercury was known as <em>Budha</em> and held astrological significance. The planet's swift movement across the sky earned it associations with messengers in many mythologies.
+  </p>
+  <p>
+    Ground-based telescopic observations of Mercury have always been a challenge due to its proximity to the Sun, making it visible only during twilight. The first telescopic studies began in the 17th century, but it wasn’t until the invention of modern instruments that its surface features were better examined. The Italian astronomer Giovanni Schiaparelli attempted to map the planet in the late 1800s, but due to optical illusions and observational limitations, his interpretations were later corrected by radar mapping in the 1960s.
+  </p>
+</section>
+  <!-- OVERVIEW SECTION -->
+<section id="overview">
+  <h2 class="rainbow-sub">☀ Overview</h2>
+  <p>
+    <strong>Mercury</strong> is the closest planet to the Sun and the smallest one in our Solar System. It’s known for its scorching daytime temperatures and freezing nights due to its lack of atmosphere.
+    Despite being small, it’s incredibly dense and has a massive iron core. Mercury's surface resembles our Moon — covered with craters, cliffs, and plains.
+  </p>
+  
+</section>
+<section id="space-probes">
+  <h2 class="rainbow-text">🛰 Research with Space Probes</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Mariner_2_Engineering_Model.jpg/1024px-Mariner_2_Engineering_Model.jpg" alt="Mariner 10 spacecraft" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    <strong>Mariner 10</strong>, launched by NASA in 1973, was the first spacecraft to visit Mercury. Using a gravity assist from Venus, it conducted three flybys between 1974 and 1975. Mariner 10 captured detailed images of approximately 45% of the planet’s surface, revealing a heavily cratered terrain similar to that of the Moon. It also discovered Mercury’s magnetic field, a surprising feature given the planet’s small size and slow rotation. These findings provided crucial insights into Mercury’s composition and geological history, despite the limited surface coverage.
+  </p>
+  <img src="https://www.jhuapl.edu/sites/default/files/2024-08/20240802-MESSENGER-Mercury.jpg" alt="MESSENGER spacecraft at Mercury" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    The <strong>MESSENGER (MErcury Surface, Space ENvironment, GEochemistry, and Ranging)</strong> spacecraft was launched in 2004 and entered orbit around Mercury in 2011. Over the course of its mission, which lasted until 2015, MESSENGER mapped 100% of the surface and delivered comprehensive data on the planet’s topography, composition, and magnetic field. It discovered polar water ice, measured Mercury’s large iron-rich core, and observed volcanic activity, painting a far more dynamic picture of the planet than previously known.
+  </p>
+  <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/07/BepiColombo_Cruise_configuration_1280.jpg" alt="BepiColombo mission" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+  <p>
+    <strong>BepiColombo</strong>, a joint mission between the European Space Agency (ESA) and the Japan Aerospace Exploration Agency (JAXA), was launched in 2018. It consists of two spacecraft: the Mercury Planetary Orbiter (MPO) and the Mercury Magnetospheric Orbiter (MMO, or Mio). The mission is designed to study Mercury’s interior structure, surface, exosphere, and magnetic environment in unprecedented detail. Scheduled to arrive in Mercury’s orbit in 2025, BepiColombo is expected to build upon the foundation laid by Mariner 10 and MESSENGER, offering new insights into the planet’s formation and evolution.
+  </p>
+</section>
+
+<!-- FACTS SECTION -->
+<section id="facts">
+  <h2 class="rainbow-sub">🎯 Fun Facts</h2>
+  <ul>
+    <li>Mercury has no moons or rings.</li>
+    <li>It has the most eccentric orbit of all planets.</li>
+    <li>It’s visible from Earth during twilight.</li>
+    <li>Named after the Roman god of speed and communication.</li>
+  </ul>
+</section>
+
+<!-- GALLERY SECTION -->
+<section id="gallery">
+  <h2 class="rainbow-sub">🖼️ Gallery</h2>
+  <div class="planet-img">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercury">
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 | Universe Explorers | All Rights Reserved 🎯 
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
